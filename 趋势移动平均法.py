@@ -59,5 +59,9 @@ bt = 2 / (n - 1) * (m211 - m212)
 y22 = at + bt * (22 - 21)
 y23 = at + bt * (23 - 21)
 
-# 与原始数据对比
-plt.plot(data_index, data_np, color='b', linewidth=2, label='原始数据')  # 原始数据展示
+# 预测数据展示
+plt.scatter(data_index, data_np, color='b',
+            linewidth=2, label='原始数据')  # 原始数据展示
+plt.scatter([22, 23], [y22, y23], color='r',
+            linewidth=2, label='原始数据')  # 原始数据展示
+plt.show()
